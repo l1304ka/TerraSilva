@@ -1,0 +1,64 @@
+.navbar-brand {
+    font-family: 'Borest', sans-serif;
+    font-size: 2.3em;
+    color: #754A2B;
+}
+
+.nav-link {
+    font-family: 'Golca Regular', sans-serif;
+    font-size: 1.3em;
+    color: #5a300a;
+}
+
+main {
+    font-family: 'Golca Regular', sans-serif;
+    color: #754A2B;
+}
+
+.card-title{
+    font-family: 'Golca Regular', sans-serif;
+    color: #754A2B;
+}
+
+.font-golca {
+    font-family: 'Golca Regular', sans-serif;
+    color: #855e44;
+}
+
+.bg-light{
+    background-color: #EFEEEA !important;
+}
+
+.menu-h1, .category-name {
+    font-family: 'Golca Regular', sans-serif;
+    color: #754A2B;
+}
+
+.btn-primary {
+    background-color: #855e44 !important;
+    border: none; !important;
+}
+
+.btn-primary:hover
+{
+    background-color: #5a300a !important;
+}
+
+.btn-primary:active, .btn-primary:visited
+{
+    background-color: #77400f !important;
+}
+
+.modal {
+    font-family: 'Golca Regular', sans-serif;
+    color: #754A2B;
+}
+
+.modal-header, .modal h5 {
+    font-family: 'Golca Regular', sans-serif;
+    color: #5a300a;
+}
+
+main {
+    min-height: calc(100vh - 140px);
+}

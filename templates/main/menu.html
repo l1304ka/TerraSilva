@@ -1,0 +1,21 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block title %}Меню{% endblock %}
+
+{% block content %}
+
+    {% for category in categories %}
+        <h2 class="mb-3 category-name">{{ category.name }}</h2>
+
+        <div class="row">
+            {% for dish in dishes %}
+                {% if dish.category == category %}
+                    {% include 'base/components/dish.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Бронирование стола</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center">
+                <form action="{% url 'order' %}" method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">ФИО</label>
+                        <input type="text" class="form-control text-center" id="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="text" class="form-control text-center" id="phone" name="phone">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="date" class="form-label">Дата</label>
+                            <input type="date" class="form-control text-center" id="date" name="date">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="time" class="form-label">Время</label>
+                            <input type="time" class="form-control text-center" id="time" name="time">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="count" class="form-label">Количество человек</label>
+                            <input type="number" class="form-control text-center" id="count" name="count" min="1" max="10">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="floor" class="form-label">Этаж</label>
+                            <input type="number" class="form-control text-center" id="floor" name="floor" min="1">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Забронировать</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

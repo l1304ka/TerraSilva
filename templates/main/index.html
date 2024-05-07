@@ -1,0 +1,53 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+    <h5 class="ps-5 pe-5 mb-5 mt-3 menu-h1">Добро пожаловать в <b>Terra Silvita</b> – оазис вкуса и природы, где каждый гость становится участником волшебного слияния с красотой окружающего мира.
+        Наш ресторан приглашает вас на уникальное кулинарное путешествие, где заботливо отобранные ингредиенты и изысканные блюда становятся частью истории о земле и ее богатстве.</h5>
+
+    <h2 class="mb-3">Наши популярные блюда</h2>
+    <div class="row">
+        {% for dish in dishes %}
+            {% include 'base/components/dish.html' %}
+        {% endfor %}
+    </div>
+
+    <h2 class="mb-3">Мы предлагаем</h2>
+    <ul class="row font-golca">
+        <li class="col-5 me-5 list-group-item">
+            <h3>Банкеты</h3>
+            <p>Независимо от того, проводите ли вы корпоративное мероприятие, свадьбу или просто семейный ужин, мы гарантируем высочайший сервис и внимание к деталям.
+                Предзаказ можно оформить по номеру: +7 (909) 871-17-17.
+                Действует сервисный сбор 10% от чека.</p>
+        </li>
+        <li class="col-5 me-5 list-group-item">
+            <h3>Доставка</h3>
+            <p>Не хотите выходить из дома, но мечтаете об изысканном блюде? Наш ресторан предлагает удобную услугу доставки. Просто выберите то, что вам нравится, и мы позаботимся об остальном.
+                Оформить доставку можно по номеру: +7 (909) 871-17-17.
+                От 5000 доставка бесплатная.</p>
+        </li>
+    </ul>
+
+    <h2 class="mb-3">Мы находимся в Казани!</h2>
+    <div class="mb-4" style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/org/terra_et_silva/106454005490/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Terra Silvita</a><a
+            href="https://yandex.ru/maps/43/kazan/category/restaurant/184106394/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Ресторан в Казани</a><a
+            href="https://yandex.ru/maps/43/kazan/category/soft_drinks_bar/87599323630/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:28px;">Безалкогольный бар в Казани</a>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=49.146581%2C55.803646&mode=search&oid=106454005490&ol=biz&sctx=ZAAAAAgBEAAaKAoSCfxUFRqIx0JAEXDNHf0v8UtAEhIJGRwlr84xoD8RITzaOGItpj8iBgABAgMEBSgKOABAiJ0GSAFqAnJ1nQHNzEw9oAEAqAEAvQE1HaOawgEG8u2cyYwDggIOdGVycmEgZXQgc2lsdmGKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=49.146581%2C55.803646&source=serp_navig&sspn=0.015525%2C0.005203&text=terra%20et%20silva&z=16.54"
+                width="760" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
+
+    <h2 class="mb-3">Отзывы</h2>
+    <div class="row mb-5">
+        {% for review in reviews %}
+            {% include 'base/components/review.html' %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

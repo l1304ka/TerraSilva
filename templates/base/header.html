@@ -1,0 +1,26 @@
+<header class="bg-light">
+    <nav class="container navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand mb-3 me-5" href="{% url 'index' %}">Terra Silvita</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item me-3 active">
+                    <a class="nav-link" href="{% url 'menu' %}">Меню</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-3" href="{% url 'about' %}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Контакты</a>
+                </li>
+            </ul>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Забронировать стол</button>
+        </div>
+    </nav>
+
+    {% include 'base/order-modal.html' %}
+    
+</header>
